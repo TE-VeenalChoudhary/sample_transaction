@@ -1,0 +1,77 @@
+package com.te.nachpaysample.pojo;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="np_invoice")
+public class Invoice {
+	
+	
+	@Id
+	@Column(name= "invoice_id")
+	private Long invoiceId;
+	
+	@Column(name= "company_name")
+	private String companyName;
+	
+	@Column(name= "bank_name")
+	private String bankName;
+	
+	@Column(name= "umrn")
+	private String umrn;
+	
+	@Column(name= "invoice_number")
+	private String invoiceNumber;
+	
+	@Column(name= "invoice_date")
+	private Date invoiceDate;
+	
+	@Column(name= "amount")
+	private Long amount;
+	
+	@Column(name= "payment_amount")
+	private Long paymentAmount;
+	
+	@Column(name= "due_amount")
+	private Long dueAmount;
+	
+	@Column(name= "payment_date")
+	private Date paymentDate;
+
+	@Column(name="credit_days")
+	private Integer creditDays;
+	
+	@Column(name= "advance_payed")
+	private Long advance_payed;
+	
+	@Column(name= "status")
+	private String status;
+	
+	@Column(name= "documents")
+	private String documents;
+	
+	@Column(name = "created_date")
+	private Date createdDate;
+	
+	@Column(name="created_by")
+	private Long createdBy;
+	
+	@Column(name = "modified_date")
+	private Date modifiedDate;
+	
+	@Column(name="modified_by")
+	private Long modifiedBy;
+	
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
+	
+	@Column(name= "relationship_id")
+	private Long relationshipId;
+
+
+}
