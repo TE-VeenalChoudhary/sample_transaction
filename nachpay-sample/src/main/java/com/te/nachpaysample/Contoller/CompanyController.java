@@ -1,4 +1,4 @@
-package com.te.nachpaysample.controller;
+package com.te.nachpaysample.Contoller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.te.nachpaysample.Service.CompanyService;
 import com.te.nachpaysample.pojo.Company;
-import com.te.nachpaysample.service.CompanyService;
 
 @RestController
 public class CompanyController {

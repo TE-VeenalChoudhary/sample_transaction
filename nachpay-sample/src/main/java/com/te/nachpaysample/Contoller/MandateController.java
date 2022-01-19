@@ -1,4 +1,4 @@
-package com.te.nachpaysample.controller;
+package com.te.nachpaysample.Contoller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.te.nachpaysample.Service.MandateService;
 import com.te.nachpaysample.pojo.Np_Mandate;
-import com.te.nachpaysample.service.MandateService;
 
 @RestController
 @RequestMapping("/mandate")
