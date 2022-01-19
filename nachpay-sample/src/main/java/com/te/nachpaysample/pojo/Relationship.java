@@ -1,5 +1,6 @@
 package com.te.nachpaysample.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="np_relationship")
-public class Relationship {
+public class Relationship implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

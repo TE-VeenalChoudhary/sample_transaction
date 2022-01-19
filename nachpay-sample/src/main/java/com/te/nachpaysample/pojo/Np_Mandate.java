@@ -1,5 +1,6 @@
 package com.te.nachpaysample.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -17,7 +18,7 @@ import lombok.Data;
 
 @Entity
 @Table(name="np_mandate")
-public class Np_Mandate {
+public class Np_Mandate implements Serializable {
 
 	@Column(name = "mandate_id")
 	@Id

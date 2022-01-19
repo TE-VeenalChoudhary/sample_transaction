@@ -6,4 +6,6 @@ import com.te.nachpaysample.pojo.Company;
 
 public interface CompanyRepo extends JpaRepository<Company, Long> {
 
+	Company findByCompanyName(String key);
+
 }

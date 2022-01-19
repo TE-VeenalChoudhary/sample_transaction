@@ -1,5 +1,6 @@
 package com.te.nachpaysample.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="np_company")
-public class Company {
+public class Company implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

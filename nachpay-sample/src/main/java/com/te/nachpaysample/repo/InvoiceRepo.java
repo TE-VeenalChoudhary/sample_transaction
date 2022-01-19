@@ -12,4 +12,6 @@ public interface InvoiceRepo extends JpaRepository<Invoice, Long> {
 
 	List<Invoice> findBycompanyName(String string);
 
+	List<Invoice> findByRelationshipId(Long relationshipId);
+
 }

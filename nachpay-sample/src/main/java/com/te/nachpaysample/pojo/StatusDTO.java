@@ -1,8 +1,14 @@
 package com.te.nachpaysample.pojo;
 
-public class StatusDTO {
+import java.io.Serializable;
 
-	
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class StatusDTO implements Serializable {
+
+	private Long uniqueKey;
+	private String companyName;
 	private Long amtPaid;
 	private Long amtUnpaid;
 	private int noOfInvoices;
@@ -14,6 +20,28 @@ public class StatusDTO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public Long getUniqueKey() {
+		return uniqueKey;
+	}
+
+
+	public void setUniqueKey(Long uniqueKey) {
+		this.uniqueKey = uniqueKey;
+	}
+
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+
 	public Long getAmtPaid() {
 		return amtPaid;
 	}

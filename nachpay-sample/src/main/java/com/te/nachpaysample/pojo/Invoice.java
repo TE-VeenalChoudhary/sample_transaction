@@ -1,5 +1,6 @@
 package com.te.nachpaysample.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -16,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="np_invoice")
-public class Invoice {
+public class Invoice implements Serializable {
 	
 	
 	@Id
