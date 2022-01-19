@@ -1,5 +1,7 @@
 package com.te.nachpaysample.pojo;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,7 +32,7 @@ public class Relationship {
 	@ManyToMany
 	@JoinColumn(name="seller_id",referencedColumnName = "company_id" ,insertable=false ,updatable=false)
 	@JoinColumn(name="buyer_id",referencedColumnName = "company_id" ,insertable=false ,updatable=false)
-	private Company company;
+	private List<Company> company;
 
 	public Long getRelationshipId() {
 		return relationshipId;

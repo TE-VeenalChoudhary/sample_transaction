@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -36,6 +37,7 @@ public class Invoice {
 	private String invoiceNumber;
 	
 	@Column(name= "invoice_date")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date invoiceDate;
 	
 	@Column(name= "amount")
@@ -48,6 +50,7 @@ public class Invoice {
 	private Long dueAmount;
 	
 	@Column(name= "payment_date")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date paymentDate;
 
 	@Column(name="credit_days")
@@ -63,12 +66,14 @@ public class Invoice {
 	private String documents;
 	
 	@Column(name = "created_date")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date createdDate;
 	
 	@Column(name="created_by")
 	private Long createdBy;
 	
 	@Column(name = "modified_date")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date modifiedDate;
 	
 	@Column(name="modified_by")

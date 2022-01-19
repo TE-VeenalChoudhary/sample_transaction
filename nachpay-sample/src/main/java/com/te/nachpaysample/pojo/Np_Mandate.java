@@ -7,8 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
@@ -60,8 +63,11 @@ public class Np_Mandate {
 	private Date modifiedDate;
 	@Column(name = "is_deleted")
 	private Boolean isDeleted;
-	@Column(name = "relationship_id")
-	private Long relationshipId;
+
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name = "relationship_Id", insertable = false,updatable = false)
+	private Relationship relationshipId;
 	
 	
 	
@@ -197,14 +203,14 @@ public class Np_Mandate {
 	public void setIsDeleted(Boolean isDeleted) {
 		this.isDeleted = isDeleted;
 	}
-	public Long getRelationshipId() {
+	public Relationship getRelationshipId() {
 		return relationshipId;
 	}
-	public void setRelationshipId(Long relationshipId) {
+	public void setRelationshipId(Relationship relationshipId) {
 		this.relationshipId = relationshipId;
 	}
-	public Np_Mandate() {
-	}
+	
+	
 	
 	
 	
